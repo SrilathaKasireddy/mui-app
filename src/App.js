@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Navbar  from "./components/Navbar"
+
+import {Main} from "./main";
+
+
+
+
+import {Box, Container,Stack} from "@mui/material"
+import { StickyHeadTable } from "./Table";
+
+
+
+export function App(){
+  
+  return(
+    
+    <Box >
+      <Stack direction ="row"  spacing={2} justifyContent="space-between">
+      
+      <Navbar/>
+         </Stack>
+      
+      <Main/>
+      <StickyHeadTable/>
+ 
+    </Box>
+    
+   
+   
+  )
 }
 
-export default App;
+export default App
